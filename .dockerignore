@@ -1,6 +1,9 @@
 astro
 .git
 .env
+.credentials/
+key_service_account.json
+*service_account*.json
 airflow_settings.yaml
 logs/
 .venv
