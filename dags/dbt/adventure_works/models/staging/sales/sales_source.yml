@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name : adventure_works_sales
+    description : 'Dados de vendas da tabela Adventure Works'
+    schema : raw_adventureworks
+    loader : bigquery
+
+    tables :
+        - name : SalesCustomer
+          description : 'Dados dos clientes do schema Sales'
+          columns :
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : AccountNumber
+                description : 'Número da conta do cliente'
+              - name : CustomerID
+                description : 'ID único do cliente'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do cliente'
+              - name : PersonID
+                description : 'Id do Vendedor referente a tabela Person'
+              - name : rowguid
+                description : 'Primary key da tabela SalesCustomer'
+              - name : StoreID
+                description : 'Id da Loja vinculada ao cliente'
+              - name : TerritoryID
+                description : 'Id do território vinculado ao cliente'
