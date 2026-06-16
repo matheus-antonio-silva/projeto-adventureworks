@@ -1,0 +1,74 @@
+version: 2
+
+sources:
+  - name : adventure_works_sales
+    description : 'Dados de vendas da tabela Adventure Works'
+    schema : raw_adventureworks
+    loader : bigquery
+
+    tables :
+        - name : SalesCustomer
+          description : 'Dados dos clientes do schema Sales'
+          columns :
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : AccountNumber
+                description : 'Número da conta do cliente'
+              - name : CustomerID
+                description : 'ID único do cliente'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do cliente'
+              - name : PersonID
+                description : 'Id do Vendedor referente a tabela Person'
+              - name : rowguid
+                description : 'Primary key da tabela SalesCustomer'
+              - name : StoreID
+                description : 'Id da Loja vinculada ao cliente'
+              - name : TerritoryID
+                description : 'Id do território vinculado ao cliente'
+        - name : SalesStore
+          description : 'Dados das lojas de vendas'
+          columns :
+              - name : SalesPersonID
+                description : 'Id do Vendedor referente a tabela Person'
+              - name : rowguid
+                description : 'Primary key da tabela SalesStore'
+              - name : Name
+                description : 'Nome da Loja'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro da Loja'
+              - name : Demographics
+                description : 'Dados demográficos da Loja'
+              - name : BusinessEntityID
+                description : 'ID da Loja'
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+        - name : SalesCreditCard
+          description : 'Dados dos cartoes de crédito utilizados nas vendas'
+          columns :
+                - name : _airbyte_raw_id
+                  description : 'Id da coleta da linha pelo Airbyte'
+                - name : _airbyte_extracted_at
+                  description : 'Data de extracao dos dados da Raw pelo Airbyte'
+                - name : _airbyte_meta
+                  description : 'Metadados da coleta de dados feita pelo Airbyte'
+                - name : ExpYear
+                  description : 'Ano de expiração do cartão de crédito'
+                - name : CardType
+                  description : 'Tipo do cartao de crédito'
+                - name : ExpMonth
+                  description : 'Mês de expiração do cartão de crédito'
+                - name : CardNumber
+                  description : 'Número do cartao de crédito'
+                - name : CreditCardID
+                  description : 'ID do cartao de crédito'
+                - name : ModifiedDate
+                  description : 'Data da modificacao do registro da cartao de crédito'
