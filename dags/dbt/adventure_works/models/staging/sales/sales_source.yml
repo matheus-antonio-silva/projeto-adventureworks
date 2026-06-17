@@ -72,3 +72,102 @@ sources:
                   description : 'ID do cartao de crédito'
                 - name : ModifiedDate
                   description : 'Data da modificacao do registro da cartao de crédito'
+        - name : SalesCountryRegionCurrency
+          description : 'Dados sobre a Regiao da Moeda'
+          columns :
+                - name : _airbyte_raw_id
+                  description : 'Id da coleta da linha pelo Airbyte'
+                - name : _airbyte_extracted_at
+                  description : 'Data de extracao dos dados da Raw pelo Airbyte'
+                - name : _airbyte_meta
+                  description : 'Metadados da coleta de dados feita pelo Airbyte'
+                - name : CurrencyCode
+                  description : 'Código da moeda'
+                - name : ModifiedDate
+                  description : 'Data da modificacao do registro da Regiao da moeda'
+                - name : CountryRegionCode
+                  description : 'Código da regiao'
+        - name : SalesCurrency
+          description : 'Dados sobre a Moeda'
+          columns :
+                - name : _airbyte_raw_id
+                  description : 'Id da coleta da linha pelo Airbyte'
+                - name : _airbyte_extracted_at
+                  description : 'Data de extracao dos dados da Raw pelo Airbyte'
+                - name : _airbyte_meta
+                  description : 'Metadados da coleta de dados feita pelo Airbyte'
+                - name : Name
+                  description : 'Nome da moeda'
+                - name : CurrencyCode
+                  description : 'Código da moeda'
+                - name :  ModifiedDate
+                  description : 'Data da modificacao do registro da Regiao da moeda'
+        - name : SalesCurrencyRate
+          description : 'Dados sobre o valor da Moeda'
+          columns : 
+                - name : _airbyte_raw_id
+                  description : 'Id da coleta da linha pelo Airbyte'
+                - name : _airbyte_extracted_at
+                  description : 'Data de extracao dos dados da Raw pelo Airbyte'
+                - name : _airbyte_meta
+                  description : 'Metadados da coleta de dados feita pelo Airbyte'
+                - name : AverageRate
+                  description : 'Preco médio da moeda'
+                - name : EndOfDayRate
+                  description : 'Preco final do dia'
+                - name : ModifiedDate
+                  description : 'Data da modificacao do registro da Regiao da moeda'
+                - name : CurrencyRateID
+                  description : 'ID do preco médio da moeda'
+                - name : ToCurrencyCode
+                  description : 'Código da moeda'
+                - name : CurrencyRateDate
+                  description : 'Data do valor da moeda'
+                - name : FromCurrencyCode
+                  description : 'Código da moeda de comparacao'
+        - name : SalesPersonCreditCard
+          description : 'Dados sobre o relacionamento do Cartao de credito e ID do Negocio'
+          columns :
+                - name : _airbyte_raw_id
+                  description : 'Id da coleta da linha pelo Airbyte'
+                - name : _airbyte_extracted_at
+                  description : 'Data de extracao dos dados da Raw pelo Airbyte'
+                - name : _airbyte_meta
+                  description : 'Metadados da coleta de dados feita pelo Airbyte'
+                - name : CreditCardID
+                  description : 'ID do cartao de crédito'
+                - name : ModifiedDate
+                  description : 'Data da modificacao do registro da Regiao da tabela'
+                - name : BusinessEntityID
+                  description : 'ID do negocio'
+        - name : SalesSalesOrderDetail
+          description : 'Dados do Detalhes das vendas'
+          columns :
+               - name : _airbyte_raw_id
+                 description : 'Id da coleta da linha pelo Airbyte'
+               - name : _airbyte_extracted_at
+                 description : 'Data de extracao dos dados da Raw pelo Airbyte'
+               - name : _airbyte_meta
+                 description : 'Metadados da coleta de dados feita pelo Airbyte'
+               - name : rowguid
+                 description : 'ID da tabela'
+               - name : OrderQty
+                 description : 'Quantidade do Produto vendido'
+               - name : LineTotal
+                 description : 'Sub total do Produto em $'
+               - name : ProductID
+                 description : 'ID do Produto vendido'
+               - name : UnitPrice
+                 description : 'Preco do produto'
+               - name : ModifiedDate
+                 description : 'Data da modificacao do registro do detalhe da venda'
+               - name : SalesOrderID
+                 description : 'ID da Venda'
+               - name : SpecialOfferID
+                 description : 'ID da Oferta'
+               - name : UnitPriceDiscount
+                 description : 'Desconto do produto unitário'
+               - name : SalesOrderDetailID
+                 description : 'ID do Detalhe da venda'
+               - name : CarrierTrackingNumber
+                 description : 'Código de rastreamento do pedido'
