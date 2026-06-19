@@ -10,8 +10,8 @@ airflow_db = ProfileConfig(
         conn_id="my_google_cloud_platform_connection",
         profile_args={
             "project": "curso-gpc-466620",
-            "dataset": "dbt-matheus",
-            "keyfile": "/usr/local/airflow/.credentials/gcp-dev-key.json",
+            "dataset": "dbt_matheus_antonio",
+            "keyfile": "/usr/local/airflow/include/gcp-dev-key.json",
         },
     ),
 )

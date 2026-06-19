@@ -21,3 +21,4 @@ target/
 dbt_packages/
 logs/
 .env
+include/gcp-dev-key.json
