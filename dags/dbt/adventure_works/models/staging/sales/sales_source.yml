@@ -171,3 +171,412 @@ sources:
                  description : 'ID do Detalhe da venda'
                - name : CarrierTrackingNumber
                  description : 'Código de rastreamento do pedido'
+        - name : SalesSalesOrderHeader
+          description : 'Dados do cabecalho dos pedidos de venda'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Status
+                description : 'Status do pedido de venda'
+              - name : TaxAmt
+                description : 'Valor do imposto do pedido'
+              - name : Comment
+                description : 'Comentario referente ao pedido'
+              - name : DueDate
+                description : 'Data prevista de entrega do pedido'
+              - name : Freight
+                description : 'Valor do frete do pedido'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : ShipDate
+                description : 'Data de envio do pedido'
+              - name : SubTotal
+                description : 'Subtotal do pedido'
+              - name : TotalDue
+                description : 'Valor total devido do pedido'
+              - name : OrderDate
+                description : 'Data do pedido'
+              - name : CustomerID
+                description : 'ID do cliente'
+              - name : TerritoryID
+                description : 'ID do territorio de venda'
+              - name : CreditCardID
+                description : 'ID do cartao de credito utilizado'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do pedido'
+              - name : SalesOrderID
+                description : 'ID do pedido de venda'
+              - name : ShipMethodID
+                description : 'ID do metodo de envio'
+              - name : AccountNumber
+                description : 'Numero da conta vinculada ao pedido'
+              - name : SalesPersonID
+                description : 'ID do vendedor'
+              - name : CurrencyRateID
+                description : 'ID da taxa de cambio'
+              - name : RevisionNumber
+                description : 'Numero da revisao do pedido'
+              - name : BillToAddressID
+                description : 'ID do endereco de cobranca'
+              - name : OnlineOrderFlag
+                description : 'Indicador se o pedido foi realizado online'
+              - name : ShipToAddressID
+                description : 'ID do endereco de entrega'
+              - name : SalesOrderNumber
+                description : 'Numero do pedido de venda'
+              - name : PurchaseOrderNumber
+                description : 'Numero da ordem de compra'
+              - name : CreditCardApprovalCode
+                description : 'Codigo de aprovacao do cartao de credito'
+
+        - name : SalesSalesOrderHeaderSalesReason
+          description : 'Dados de relacionamento entre pedidos de venda e motivos de venda'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : SalesOrderID
+                description : 'ID do pedido de venda'
+              - name : SalesReasonID
+                description : 'ID do motivo da venda'
+
+        - name : SalesSalesPerson
+          description : 'Dados dos vendedores'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Bonus
+                description : 'Valor de bonus do vendedor'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : SalesYTD
+                description : 'Valor de vendas acumulado no ano'
+              - name : SalesQuota
+                description : 'Meta de vendas do vendedor'
+              - name : TerritoryID
+                description : 'ID do territorio de venda'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do vendedor'
+              - name : CommissionPct
+                description : 'Percentual de comissao do vendedor'
+              - name : SalesLastYear
+                description : 'Valor de vendas do ano anterior'
+              - name : BusinessEntityID
+                description : 'ID da entidade de negocio do vendedor'
+
+        - name : SalesSalesPersonQuotaHistory
+          description : 'Historico de metas de vendas dos vendedores'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : QuotaDate
+                description : 'Data da meta de vendas'
+              - name : SalesQuota
+                description : 'Valor da meta de vendas'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : BusinessEntityID
+                description : 'ID da entidade de negocio do vendedor'
+
+        - name : SalesSalesReason
+          description : 'Dados dos motivos de venda'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do motivo da venda'
+              - name : ReasonType
+                description : 'Tipo do motivo da venda'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do motivo da venda'
+              - name : SalesReasonID
+                description : 'ID do motivo da venda'
+
+        - name : SalesSalesTaxRate
+          description : 'Dados das taxas de imposto sobre vendas'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome da taxa de imposto'
+              - name : TaxRate
+                description : 'Percentual da taxa de imposto'
+              - name : TaxType
+                description : 'Tipo da taxa de imposto'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro da taxa de imposto'
+              - name : SalesTaxRateID
+                description : 'ID da taxa de imposto'
+              - name : StateProvinceID
+                description : 'ID do estado ou provincia'
+
+        - name : SalesSalesTerritory
+          description : 'Dados dos territorios de venda'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do territorio de venda'
+              - name : Group
+                description : 'Grupo do territorio de venda'
+              - name : CostYTD
+                description : 'Custo acumulado no ano'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : SalesYTD
+                description : 'Vendas acumuladas no ano'
+              - name : TerritoryID
+                description : 'ID do territorio de venda'
+              - name : CostLastYear
+                description : 'Custo do ano anterior'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do territorio'
+              - name : SalesLastYear
+                description : 'Vendas do ano anterior'
+              - name : CountryRegionCode
+                description : 'Codigo do pais ou regiao'
+
+        - name : SalesSalesTerritoryHistory
+          description : 'Historico dos territorios de venda dos vendedores'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : EndDate
+                description : 'Data final do vinculo com o territorio'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : StartDate
+                description : 'Data inicial do vinculo com o territorio'
+              - name : TerritoryID
+                description : 'ID do territorio de venda'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : BusinessEntityID
+                description : 'ID da entidade de negocio do vendedor'
+
+        - name : SalesShoppingCartItem
+          description : 'Dados dos itens do carrinho de compras'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Quantity
+                description : 'Quantidade do produto no carrinho'
+              - name : ProductID
+                description : 'ID do produto'
+              - name : DateCreated
+                description : 'Data de criacao do item no carrinho'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : ShoppingCartID
+                description : 'ID do carrinho de compras'
+              - name : ShoppingCartItemID
+                description : 'ID do item do carrinho de compras'
+
+        - name : SalesSpecialOffer
+          description : 'Dados das ofertas especiais'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Type
+                description : 'Tipo da oferta especial'
+              - name : MaxQty
+                description : 'Quantidade maxima da oferta'
+              - name : MinQty
+                description : 'Quantidade minima da oferta'
+              - name : EndDate
+                description : 'Data final da oferta'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : Category
+                description : 'Categoria da oferta'
+              - name : StartDate
+                description : 'Data inicial da oferta'
+              - name : Description
+                description : 'Descricao da oferta especial'
+              - name : DiscountPct
+                description : 'Percentual de desconto da oferta'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro da oferta'
+              - name : SpecialOfferID
+                description : 'ID da oferta especial'
+
+        - name : SalesSpecialOfferProduct
+          description : 'Dados de relacionamento entre ofertas especiais e produtos'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : rowguid
+                description : 'ID unico da linha'
+              - name : ProductID
+                description : 'ID do produto'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : SpecialOfferID
+                description : 'ID da oferta especial'
+        - name : ProductionProduct
+          description : 'Dados da tabela dos produtos da empresa'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do produto'
+              - name : Size
+                description : 'Tamanho do produto'
+              - name : Class
+                description : 'Classe do produto'
+              - name : Color
+                description : 'Cor do produto'
+              - name : Style
+                description : 'Estilo do produto'
+              - name : Weight
+                description : 'Peso do produto'
+              - name : rowguid
+                description : 'Identificador unico da linha'
+              - name : MakeFlag
+                description : 'Indicador se o produto e fabricado internamente'
+              - name : ListPrice
+                description : 'Preco de venda do produto'
+              - name : ProductID
+                description : 'ID unico do produto'
+              - name : ProductLine
+                description : 'Linha do produto'
+              - name : SellEndDate
+                description : 'Data final de venda do produto'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do produto'
+              - name : ReorderPoint
+                description : 'Ponto de reposicao do estoque do produto'
+              - name : StandardCost
+                description : 'Custo padrao do produto'
+              - name : ProductNumber
+                description : 'Numero identificador do produto'
+              - name : SellStartDate
+                description : 'Data inicial de venda do produto'
+              - name : ProductModelID
+                description : 'ID do modelo do produto'
+              - name : DiscontinuedDate
+                description : 'Data de descontinuacao do produto'
+              - name : SafetyStockLevel
+                description : 'Nivel minimo de estoque de seguranca'
+              - name : DaysToManufacture
+                description : 'Quantidade de dias necessarios para fabricar o produto'
+              - name : FinishedGoodsFlag
+                description : 'Indicador se o produto e um bem finalizado para venda'
+              - name : SizeUnitMeasureCode
+                description : 'Codigo da unidade de medida do tamanho do produto'
+              - name : ProductSubcategoryID
+                description : 'ID da subcategoria do produto'
+              - name : WeightUnitMeasureCode
+                description : 'Codigo da unidade de medida do peso do produto'
+        
+        - name : ProductionProductSubcategory
+          description : 'Dados da subcategoria dos produtos'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome da subcategoria do produto'
+              - name : rowguid
+                description : 'Identificador unico da linha'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro da subcategoria do produto'
+              - name : ProductCategoryID
+                description : 'ID da categoria do produto'
+              - name : ProductSubcategoryID
+                description : 'ID da subcategoria do produto'
+        - name : ProductionProductCategory
+          description : 'Dados da categoria dos produtos'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome da categoria do produto'
+              - name : rowguid
+                description : 'Identificador unico da linha'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro da categoria do produto'
+              - name : ProductCategoryID
+                description : 'ID da categoria do produto'
+      
+        - name : ProductionProductModel
+          description : 'Dados dos modelos dos produtos'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do modelo do produto'
+              - name : rowguid
+                description : 'Identificador unico da linha'
+              - name : Instructions
+                description : 'Instrucoes relacionadas ao modelo do produto'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro do modelo do produto'
+              - name : ProductModelID
+                description : 'ID do modelo do produto'
+              - name : CatalogDescription
+                description : 'Descricao do catalogo do modelo do produto'
