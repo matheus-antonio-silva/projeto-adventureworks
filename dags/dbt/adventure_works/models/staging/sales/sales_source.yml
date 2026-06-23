@@ -580,3 +580,37 @@ sources:
                 description : 'ID do modelo do produto'
               - name : CatalogDescription
                 description : 'Descricao do catalogo do modelo do produto'
+        - name : PersonPerson
+          columns : 
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Title
+                description : 'Título da Pessoa'
+              - name : Suffix
+                description : 'Sufixo do nome da pessoa'
+              - name : rowguid
+                description : 'ID da tabela'
+              - name : LastName
+                description : 'Ultimo nome da Pessoa'
+              - name : FirstName
+                description : 'Primeiro nome da pessoa'
+              - name : NameStyle
+                description : 'Estilo do nome'
+              - name : MiddleName
+                description : 'Nome do meio'
+              - name : PersonType
+                description : 'Tipo da Pessoa'
+              - name : Demographics
+                description : 'Dados demografico'
+              - name : ModifiedDate
+                description : 'Data da modificacao do dado na tabela'
+              - name : EmailPromotion
+                description : 'Email para enviar promocoes'
+              - name : BusinessEntityID
+                description : 'ID da pessoa'
+              - name : AdditionalContactInfo
+                description : 'Dados adicionais da pessoa'
