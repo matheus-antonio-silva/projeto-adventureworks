@@ -581,6 +581,7 @@ sources:
               - name : CatalogDescription
                 description : 'Descricao do catalogo do modelo do produto'
         - name : PersonPerson
+          description : 'Dados de clientes por pessoa fisica'
           columns : 
               - name : _airbyte_raw_id
                 description : 'Id da coleta da linha pelo Airbyte'
@@ -614,3 +615,74 @@ sources:
                 description : 'ID da pessoa'
               - name : AdditionalContactInfo
                 description : 'Dados adicionais da pessoa'
+
+        - name : PersonAddress
+          description : 'Dados do endereco do cliente'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : City
+                description : 'Cidade do cliente'
+              - name : rowguid  
+                description : 'ID da tabela'
+              - name : AddressID
+                description : 'ID do endereco'
+              - name : PostalCode
+                description : 'Código postal do endereco'
+              - name : AddressLine1
+                description : 'Nome da rua primaria'
+              - name : AddressLine2
+                description : 'Nome da rua secundaria'
+              - name : ModifiedDate
+                description : 'Data de modificacao do registros'
+              - name : SpatialLocation
+                description : 'Dados espacial do local'
+              - name : StateProvinceID
+                description : 'ID relacional da Provincia' 
+        - name : PersonAddressType
+          description : 'Dados do tipo de endereco'
+          columns : 
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do tipo de endereco'
+              - name : rowguid
+                description : 'id da tabela'
+              - name : ModifiedDate
+                description : 'Data da modificacao do registro'
+              - name : AddressTypeID
+                description : 'ID Relacional do tipo de endereco'
+        - name : PersonStateProvince
+          description : 'Dados da provincia do endereco'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name
+                description : 'Nome do estado da provincia'
+              - name : rowguid
+                description : 'ID da tabela'
+              - name : TerritoryID
+                description : 'ID relacionado do territorio'
+              - name : ModifiedDate
+                description : 'Data de modificacao do registro da tabela'
+              - name : StateProvinceID
+                description : 'ID do Estado da provincia'
+              - name : CountryRegionCode
+                description : 'Codigo da regiao do pais'
+              - name : StateProvinceCode
+                description : 'Code do estado da provincia'
+              - name : IsOnlyStateProvinceFlag
+                description : 'Flag para identificar se é apenas stado da provincia'
+                                  
