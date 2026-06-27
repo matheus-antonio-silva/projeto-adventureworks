@@ -685,4 +685,27 @@ sources:
                 description : 'Code do estado da provincia'
               - name : IsOnlyStateProvinceFlag
                 description : 'Flag para identificar se é apenas stado da provincia'
+                
+        - name : PurchasingShipMethod
+          description : 'Dados do método de envio (transporte)'
+          columns :
+              - name : _airbyte_raw_id
+                description : 'Id da coleta da linha pelo Airbyte'
+              - name : _airbyte_extracted_at
+                description : 'Data de extracao dos dados da Raw pelo Airbyte'
+              - name : _airbyte_meta
+                description : 'Metadados da coleta de dados feita pelo Airbyte'
+              - name : Name 
+                description : 'Nome do método de envio'
+              - name : rowguid 
+                description : 'ID da tabela'
+              - name : ShipBase 
+                description : 'Valor base fixo do frete para o método de envio'
+              - name : ShipRate
+                description : 'Taxa variável aplicada ao frete para o método de envio'
+              - name : ModifiedDate 
+                description : 'Data de modificacao do registro da tabela'
+              - name : ShipMethodID 
+                description : 'ID do método de envio'
+  
                                   
