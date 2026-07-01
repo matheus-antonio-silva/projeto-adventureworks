@@ -1,17 +1,12 @@
 "Contains profile mappings used in the project"
 
+import os
+from pathlib import Path
+
 from cosmos import ProfileConfig
-from cosmos.profiles.bigquery import GoogleCloudServiceAccountFileProfileMapping
 
 airflow_db = ProfileConfig(
     profile_name="dbt_adventure_works",
-    target_name="dev",
-    profile_mapping=GoogleCloudServiceAccountFileProfileMapping(
-        conn_id="my_google_cloud_platform_connection",
-        profile_args={
-            "project": "curso-gpc-466620",
-            "dataset": "dbt_matheus_antonio",
-            "keyfile": "/usr/local/airflow/include/gcp-dev-key.json",
-        },
-    ),
+    target_name=os.environ.get("DBT_TARGET", "dev"),
+    profiles_yml_filepath=Path("/usr/local/airflow/dags/dbt/adventure_works/profiles.yml"),
 )
