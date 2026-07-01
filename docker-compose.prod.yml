@@ -1,0 +1,48 @@
+services:
+  scheduler:
+    environment:
+      DBT_TARGET: prod
+      GCP_PROD_PROJECT: ${GCP_PROD_PROJECT}
+      DBT_PROD_SCHEMA: ${DBT_PROD_SCHEMA}
+      GCP_PROD_KEYFILE_PATH: /usr/local/airflow/.credentials/gcp-prod-key.json
+      GCP_DEV_PROJECT: ${GCP_DEV_PROJECT}
+      DBT_DEV_SCHEMA: ${DBT_DEV_SCHEMA}
+      GCP_DEV_KEYFILE_PATH: ${GCP_DEV_KEYFILE_PATH}
+    volumes:
+      - ./.credentials/gcp-prod-key.json:/usr/local/airflow/.credentials/gcp-prod-key.json:ro
+
+  api-server:
+    environment:
+      DBT_TARGET: prod
+      GCP_PROD_PROJECT: ${GCP_PROD_PROJECT}
+      DBT_PROD_SCHEMA: ${DBT_PROD_SCHEMA}
+      GCP_PROD_KEYFILE_PATH: /usr/local/airflow/.credentials/gcp-prod-key.json
+      GCP_DEV_PROJECT: ${GCP_DEV_PROJECT}
+      DBT_DEV_SCHEMA: ${DBT_DEV_SCHEMA}
+      GCP_DEV_KEYFILE_PATH: ${GCP_DEV_KEYFILE_PATH}
+    volumes:
+      - ./.credentials/gcp-prod-key.json:/usr/local/airflow/.credentials/gcp-prod-key.json:ro
+
+  dag-processor:
+    environment:
+      DBT_TARGET: prod
+      GCP_PROD_PROJECT: ${GCP_PROD_PROJECT}
+      DBT_PROD_SCHEMA: ${DBT_PROD_SCHEMA}
+      GCP_PROD_KEYFILE_PATH: /usr/local/airflow/.credentials/gcp-prod-key.json
+      GCP_DEV_PROJECT: ${GCP_DEV_PROJECT}
+      DBT_DEV_SCHEMA: ${DBT_DEV_SCHEMA}
+      GCP_DEV_KEYFILE_PATH: ${GCP_DEV_KEYFILE_PATH}
+    volumes:
+      - ./.credentials/gcp-prod-key.json:/usr/local/airflow/.credentials/gcp-prod-key.json:ro
+
+  triggerer:
+    environment:
+      DBT_TARGET: prod
+      GCP_PROD_PROJECT: ${GCP_PROD_PROJECT}
+      DBT_PROD_SCHEMA: ${DBT_PROD_SCHEMA}
+      GCP_PROD_KEYFILE_PATH: /usr/local/airflow/.credentials/gcp-prod-key.json
+      GCP_DEV_PROJECT: ${GCP_DEV_PROJECT}
+      DBT_DEV_SCHEMA: ${DBT_DEV_SCHEMA}
+      GCP_DEV_KEYFILE_PATH: ${GCP_DEV_KEYFILE_PATH}
+    volumes:
+      - ./.credentials/gcp-prod-key.json:/usr/local/airflow/.credentials/gcp-prod-key.json:ro

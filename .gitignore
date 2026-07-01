@@ -22,3 +22,4 @@ dbt_packages/
 logs/
 .env
 include/gcp-dev-key.json
+include/gcp-prod-key.json
